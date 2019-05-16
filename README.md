@@ -45,6 +45,10 @@ You will also see any lint errors in the console.
     |   ├── App/
     |   ├── assets/
     |   |   └── images/
+    |   ├── components/
+    |   |   └── Masthead/
+    |   ├── containers/
+    |   |   └── Header/
     |   ├── pages/
     |   |   └── DetailsEmployee/
     |   |   └── Errors/
