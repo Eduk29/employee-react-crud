@@ -1,0 +1,10 @@
+@import '../../theme/base.scss';
+
+.masthead {
+    height: 8rem;
+    width: 100%;
+}
+
+.masthead-background {
+    background-color: $background-masthead-color;
+}
