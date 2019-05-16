@@ -11,6 +11,9 @@ This application is a preliminary study using [React](https://reactjs.org/), so 
 ## Dependencies
 - [JSON Server](https://github.com/typicode/json-server)
 - [React-Router-Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+- [Bootstrap](https://getbootstrap.com/)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [Node-Sass](https://github.com/sass/node-sass)
 
 ## Installation
 This project was bootstrapped with [React Create App](https://github.com/facebook/create-react-app). So open the command terminal in a directory of your choice and run the following instructions: 
