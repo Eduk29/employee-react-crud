@@ -32,7 +32,7 @@ json-server --watch db.json
 ```bash
 npm start
 ```
-3 - Open [http://localhost:3000](http://localhost:3000) to view application in your browser.
+3 - Open [http://localhost:4200](http://localhost:4200) to view application in your browser.
 
 The page will reload if you make edits in code.  
 You will also see any lint errors in the console.
