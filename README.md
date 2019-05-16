@@ -44,24 +44,13 @@ You will also see any lint errors in the console.
     |   ├── App/
     |   ├── assets/
     |   |   └── images/
-    |   |   |   └── logo.svg
     |   ├── pages/
     |   |   └── DetailsEmployee/
-    |   |   |   └── DetailsEmployee.js
-    |   |   |   └── index.js
     |   |   └── Errors/
     |   |   └── ListEmployee/
-    |   |   |   └── ListEmployee.js
-    |   |   |   └── index.js
     |   |   └── NewEmployee/
-    |   |   |   └── NewEmployee.js
-    |   |   |   └── index.js
     |   |   └── RemoveEmployee/
-    |   |   |   └── RemoveEmployee.js
-    |   |   |   └── index.js
     |   |   └── UpdateEmployee/
-    |   |   |   └── UpdateEmployee.js
-    |   |   |   └── index.js
     |   ├── index.css
     |   ├── index.js
     |   └── serviceWorker.js
