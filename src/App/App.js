@@ -1,14 +1,14 @@
 import React from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
-import ListEmployee from './../pages/ListEmployee/ListEmployee';
-import NewEmployee from './../pages/NewEmployee/index';
-import UpdateEmployee from './../pages/UpdateEmployee/index';
-import DetailsEmployee from './../pages/DetailsEmployee/DetailsEmployee';
-import RemoveEmployee from './../pages/RemoveEmployee/index';
+import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
+import ListEmployee from "./../pages/ListEmployee/ListEmployee";
+import NewEmployee from "./../pages/NewEmployee/index";
+import UpdateEmployee from "./../pages/UpdateEmployee/index";
+import DetailsEmployee from "./../pages/DetailsEmployee/DetailsEmployee";
+import RemoveEmployee from "./../pages/RemoveEmployee/index";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/employee">
       <Switch>
         <Route path="/" exact component={ListEmployee} />
         <Route path="/new" exact component={NewEmployee} />
