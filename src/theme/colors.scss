@@ -1,10 +1,11 @@
 // Color Set
 
 // General
-$background-masthead-color: #e3f2fd;
+$background-masthead-color: #3F51B5;
 $background-color: #eceff1;
 $foreground-color: #263238;
 $icon-color: #78909c;
+$text-color: #ffffff;
 $white-color: #ffffff;
 $black-color: #000000;
 
@@ -25,23 +26,23 @@ $light-dividers: rgba(#ffffff, 0.12);
 $light-focused: rgba(#ffffff, 0.12);
 
 // Primary: MaterialUI - lightBlue (600, 200, 900)
-$primary-base: #039be5;
-$primary-light: #81d4fa;
-$primary-dark: #01579b;
+$primary: #039be5;
+$primary-lighter: #81d4fa;
+$primary-darker: #01579b;
 
 // Secondary: MaterialUI - amber (500, 300, 700)
-$secondary-base: #ffc107;
-$secondary-light: #ffd54f;
-$secondary-dark: #ffa000;
+$secondary: #ffc107;
+$secondary-lighter: #ffd54f;
+$secondary-darker: #ffa000;
 
 // Accent: MaterialUI - green (A700, 300, 900)
-$accent-base: #00c853;
-$accent-light: #81c784;
-$accent-dark: #1b5e20;
+$accent: #00c853;
+$accent-lighter: #81c784;
+$accent-darker: #1b5e20;
 
 // Warn: MaterialUI - red (A700, 400, 900)
-$warn-base: #d50000;
-$warn-light: #ef5350;
-$warn-dark: #b71c1c;
+$warn: #d50000;
+$warn-lighter: #ef5350;
+$warn-darker: #b71c1c;
 
 
