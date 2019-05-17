@@ -52,8 +52,10 @@ You will also see any lint errors in the console.
     |   ├── components/
     |   |   └── Masthead/
     |   |   └── TopMenu/
+    |   |   └── EmployeeTable/
     |   ├── containers/
     |   |   └── Header/
+    |   |   └── List/
     |   ├── pages/
     |   |   └── DetailsEmployee/
     |   |   └── Errors/
