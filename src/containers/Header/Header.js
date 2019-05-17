@@ -6,7 +6,7 @@ const Header = () => {
     <div>
       <h1>Container Header</h1>
       <h2>TopNavabar Component</h2>
-      <Masthead title='Masthead Component Title' />
+      <Masthead title='Masthead Component Title' class='d-flex flex-row justify-content-center align-items-center masthead masthead-background' />
     </div>
   );
 };
