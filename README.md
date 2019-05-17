@@ -48,8 +48,10 @@ You will also see any lint errors in the console.
     |   ├── App/
     |   ├── assets/
     |   |   └── images/
+    |   |   └── icons/
     |   ├── components/
     |   |   └── Masthead/
+    |   |   └── TopMenu/
     |   ├── containers/
     |   |   └── Header/
     |   ├── pages/
