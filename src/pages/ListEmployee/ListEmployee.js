@@ -1,11 +1,15 @@
+// React
 import React from "react";
+
+// Containers
 import Header from "../../containers/Header/Header";
+import List from './../../containers/List/index';
 
 const ListEmployee = () => {
   return (
     <div>
-      {/* <h1>Page ListEmployee</h1> */}
       <Header />
+      <List />
     </div>
   );
 };
