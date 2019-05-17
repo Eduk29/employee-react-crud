@@ -12,6 +12,7 @@ This application is a preliminary study using [React](https://reactjs.org/), so 
 - [JSON Server](https://github.com/typicode/json-server)
 - [React-Router-Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
 - [Bootstrap](https://getbootstrap.com/)
+- [Material-UI](https://material-ui.com/)
 - [React-Bootstrap](https://react-bootstrap.github.io/)
 - [Node-Sass](https://github.com/sass/node-sass)
 
