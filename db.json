@@ -1,115 +1,115 @@
 {
-  "funcionarios": [
+  "employees": [
     {
-      "nome": "Paulo Mateus Gonçalves",
-      "dataNascimento": "1990-02-15T03:00:00.000Z",
+      "name": "Paulo Mateus Gonçalves",
+      "birthday": "1990-02-15T03:00:00.000Z",
       "cpf": "656.403.760-07",
       "rg": "25.121.966-5",
-      "telefone": "3265-7849",
+      "phone": "3265-7849",
       "id": 1
     },
     {
+      "name": "Fernando Heinz",
+      "birthday": "1978-04-28T03:00:00.000Z",
       "cpf": "634.459.640-68",
       "rg": "44.419.318-2",
-      "telefone": "4563-2136",
-      "nome": "Fernando Heinz",
-      "dataNascimento": "1978-04-28T03:00:00.000Z",
+      "phone": "4563-2136",
       "id": 2
     },
     {
-      "nome": "Augusto Matraca",
-      "dataNascimento": "2001-06-07T03:00:00.000Z",
+      "name": "Augusto Matraca",
+      "birthday": "2001-06-07T03:00:00.000Z",
       "cpf": "923.282.910-07",
       "rg": "22.203.056-2",
-      "telefone": "4789-9632",
+      "phone": "4789-9632",
       "id": 3
     },
     {
-      "nome": "Suelen Franzfurd",
-      "dataNascimento": "1985-06-04T03:00:00.000Z",
+      "name": "Suelen Franzfurd",
+      "birthday": "1985-06-04T03:00:00.000Z",
       "cpf": "481.029.200-25",
       "rg": "39.415.410-1",
-      "telefone": "2564-8897",
+      "phone": "2564-8897",
       "id": 4
     },
     {
-      "nome": "Adoniram Jimenez",
-      "dataNascimento": "1957-06-03T03:00:00.000Z",
+      "name": "Adoniram Jimenez",
+      "birthday": "1957-06-03T03:00:00.000Z",
       "cpf": "344.448.160-82",
       "rg": "13.347.433-1",
-      "telefone": "3685-4785",
+      "phone": "3685-4785",
       "id": 5
     },
     {
-      "nome": "Florencio Martinez",
-      "dataNascimento": "1987-01-18T02:00:00.000Z",
+      "name": "Florencio Martinez",
+      "birthday": "1987-01-18T02:00:00.000Z",
       "cpf": "050.252.620-38",
       "rg": "50.610.158-7",
-      "telefone": "4136-5287",
+      "phone": "4136-5287",
       "id": 6
     },
     {
-      "nome": "Heitor Penteado",
-      "dataNascimento": "1968-03-29T03:00:00.000Z",
+      "name": "Heitor Penteado",
+      "birthday": "1968-03-29T03:00:00.000Z",
       "cpf": "425.880.950-03",
       "rg": "13.949.284-7",
-      "telefone": "5403-6879",
+      "phone": "5403-6879",
       "id": 7
     },
     {
-      "nome": "Joaquim Silva",
-      "dataNascimento": "1994-08-10T03:00:00.000Z",
+      "name": "Joaquim Silva",
+      "birthday": "1994-08-10T03:00:00.000Z",
       "cpf": "246.474.270-80",
       "rg": "35.668.164-6",
-      "telefone": "6870-9890",
+      "phone": "6870-9890",
       "id": 8
     },
     {
-      "nome": "Paula Kliegman",
-      "dataNascimento": "2001-05-06T03:00:00.000Z",
+      "name": "Paula Kliegman",
+      "birthday": "2001-05-06T03:00:00.000Z",
       "cpf": "220.044.790-60",
       "rg": "27.719.542-1",
-      "telefone": "2656-9879",
+      "phone": "2656-9879",
       "id": 9
     },
     {
-      "nome": "Giuliano Fruetz",
-      "dataNascimento": "1990-03-18T03:00:00.000Z",
+      "name": "Giuliano Fruetz",
+      "birthday": "1990-03-18T03:00:00.000Z",
       "cpf": "478.503.820-99",
       "rg": "11.131.508-6",
-      "telefone": "4658-0698",
+      "phone": "4658-0698",
       "id": 10
     },
     {
-      "nome": "Bruna Padalio",
-      "dataNascimento": "1995-12-27T02:00:00.000Z",
+      "name": "Bruna Padalio",
+      "birthday": "1995-12-27T02:00:00.000Z",
       "cpf": "490.355.010-98",
       "rg": "22.444.739-7",
-      "telefone": "2360-5048",
+      "phone": "2360-5048",
       "id": 11
     },
     {
-      "nome": "Aurora Viena",
-      "dataNascimento": "1988-06-04T03:00:00.000Z",
+      "name": "Aurora Viena",
+      "birthday": "1988-06-04T03:00:00.000Z",
       "cpf": "319.710.860-45",
       "rg": "46.080.492-3",
-      "telefone": "3269-7845",
+      "phone": "3269-7845",
       "id": 12
     },
     {
-      "nome": "Florencio de Abreu",
-      "dataNascimento": "2019-04-26T03:00:00.000Z",
+      "name": "Florencio de Abreu",
+      "birthday": "2019-04-26T03:00:00.000Z",
       "cpf": "903.432.890-24",
       "rg": "23.728.007-3",
-      "telefone": "2878-0989",
+      "phone": "2878-0989",
       "id": 13
     },
     {
-      "nome": "Jonatas Oliveira",
-      "dataNascimento": "1999-06-24T03:00:00.000Z",
+      "name": "Jonatas Oliveira",
+      "birthday": "1999-06-24T03:00:00.000Z",
       "cpf": "612.123.540-07",
       "rg": "22.451.186-5",
-      "telefone": "7469-7849",
+      "phone": "7469-7849",
       "id": 14
     }
   ]
