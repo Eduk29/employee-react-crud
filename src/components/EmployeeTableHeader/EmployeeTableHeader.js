@@ -1,7 +1,13 @@
+// React
 import React from 'react';
+
+// Styles
+import './EmployeeTableHeader.scss';
+
+// Material
 import { TableRow, TableCell, TableHead } from '@material-ui/core';
 
-const EmployeeTableHead = () => {
+const EmployeeTableHeader = () => {
   return (
     <TableHead>
       <TableRow>
@@ -9,7 +15,7 @@ const EmployeeTableHead = () => {
           className={'p-0 idColumn header-cell-text-size'}
           colSpan='4'
           align='center'>
-          No.
+          Id
         </TableCell>
         <TableCell
           className={'p-0 nomeColumn header-cell-text-size'}
@@ -47,4 +53,4 @@ const EmployeeTableHead = () => {
   );
 };
 
-export default EmployeeTableHead;
+export default EmployeeTableHeader;
