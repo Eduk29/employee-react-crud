@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 import ListEmployee from "./../pages/ListEmployee/ListEmployee";
 import NewEmployee from "./../pages/NewEmployee/index";
 import UpdateEmployee from "./../pages/UpdateEmployee/index";
