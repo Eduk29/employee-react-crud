@@ -1,0 +1,41 @@
+@import '../../theme/base.scss';
+
+// .table-style {
+//     overflowX: 'auto',
+// }
+
+.data-cell-text-size {
+    font-size: $body-1-size !important;
+    line-height: $body-1-line-height !important;
+    font-weight: $body-1-font-weight !important;
+}
+
+// .header-cell-text-size {
+//     font-size: $body-2-size !important;
+//     line-height: $body-2-line-height !important;
+//     font-weight: $body-2-font-weight !important;
+// }
+
+.idColumn {
+    width: 3rem;
+}
+
+.nameColumn {
+    width: 10rem
+}
+
+.birthdayColumn {
+    width: 6rem;
+}
+
+.cpfColumn {
+    width: 5rem;
+}
+
+.rgColumn {
+    width: 5rem;
+}
+
+.phoneColumn{
+    width: 5rem;
+}

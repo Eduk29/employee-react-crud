@@ -1,9 +1,16 @@
+// React
 import React from 'react';
 
+// Components
+import EmployeeTableActionsMenu from '../EmployeeTableActionsMenu/EmployeeTableActionsMenu';
+
+// Material
 import { TableRow, TableCell, TableBody } from '@material-ui/core';
 
+// Styles
+import './EmployeeTableRow.scss';
+
 const EmployeeTableRow = props => {
-  console.log(props);
   return (
     <TableBody>
       {props.employees
@@ -22,17 +29,16 @@ const EmployeeTableRow = props => {
               {employee.id}
             </TableCell>
             <TableCell
-              className={'p-0 nomeColumn data-cell-text-size'}
+              className={'p-0 nameColumn data-cell-text-size'}
               colSpan='6'
               align='left'>
               {employee.name}
             </TableCell>
             <TableCell
-              className={'p-0 dataColumn data-cell-text-size'}
+              className={'p-0 birthdayColumn data-cell-text-size'}
               colSpan='2'
               align='left'>
-              teste
-              {/* {this.convertToLocaleDate(employee.dataNascimento)} */}
+              {props.convertToLocaleDate(employee.birthday)}
             </TableCell>
             <TableCell
               className={'p-0 cpfColumn data-cell-text-size'}
@@ -47,12 +53,14 @@ const EmployeeTableRow = props => {
               {employee.rg}
             </TableCell>
             <TableCell
-              className={'p-0 telefoneColumn data-cell-text-size'}
+              className={'p-0 phoneColumn data-cell-text-size'}
               colSpan='1'
               align='left'>
               {employee.phone}
             </TableCell>
-            <TableCell>{/* <ActionMenu /> */}</TableCell>
+            <TableCell>
+              <EmployeeTableActionsMenu />
+            </TableCell>
           </TableRow>
         ))}
     </TableBody>
