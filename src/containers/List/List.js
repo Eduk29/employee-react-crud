@@ -28,6 +28,7 @@ export class List extends Component {
     this.getEmployeeList();
   }
 
+  // Methods
   getEmployeeList() {
     EmployeeService.getEmployeeList().then(data => {
       let employees = { ...this.state.employees };
@@ -36,11 +37,21 @@ export class List extends Component {
     });
   }
 
+  convertToLocaleDate(date) {
+    let newDate = new Date(date);
+    return newDate.toLocaleDateString('pt-BR');
+  }
+
+  // Render
   render() {
     return (
       <div className='container'>
         <h2>Container List</h2>
-        <EmployeeTable employees={ this.state.employees } pageInformations={ this.state.pageInformations } />
+        <EmployeeTable
+          employees={this.state.employees}
+          pageInformations={this.state.pageInformations}
+          convertToLocaleDate={this.convertToLocaleDate}
+        />
       </div>
     );
   }
