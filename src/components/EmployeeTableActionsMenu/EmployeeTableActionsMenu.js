@@ -4,31 +4,36 @@ import { Link } from 'react-router-dom';
 
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faPencilAlt, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSearch,
+  faPencilAlt,
+  faTrashAlt
+} from '@fortawesome/free-solid-svg-icons';
 
 // Styles
 import './EmployeeTableActionsMenu.scss';
 
-const EmployeeTableActionsMenu = () => {
+const EmployeeTableActionsMenu = props => {
   return (
     <div>
-      <Link to='/update'>
+      <Link to={`${props.id}/update`}>
         <FontAwesomeIcon
           className={'mx-2 icon-size icon-color'}
           icon={faPencilAlt}
         />
       </Link>
-      <Link to='/details'>
-        {/* <Link to={`${this.props.id}'/details'`}> */}
+      <Link to={`${props.id}/details`}>
         <FontAwesomeIcon
           className={'mx-2 icon-size icon-color'}
           icon={faSearch}
         />
       </Link>
-      <FontAwesomeIcon
-        className={'mx-2 icon-size icon-color'}
-        icon={faTrashAlt}
-      />
+      <Link to={`${props.id}/remove`}>
+        <FontAwesomeIcon
+          className={'mx-2 icon-size icon-color'}
+          icon={faTrashAlt}
+        />
+      </Link>
     </div>
   );
 };

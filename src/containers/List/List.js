@@ -7,6 +7,10 @@ import EmployeeTable from '../../components/EmployeeTable/EmployeeTable';
 // Service
 import * as EmployeeService from '../../services/EmployeeService';
 
+// Material
+import { Table } from '@material-ui/core';
+
+
 const initialState = {
   employees: [],
   pageInformations: {
@@ -42,16 +46,32 @@ export class List extends Component {
     return newDate.toLocaleDateString('pt-BR');
   }
 
+  handleChangePage = (event, page) => {
+    const pageInformations = { ...this.state.pageInformations };
+    pageInformations.pageIndex = page;
+    this.setState({ pageInformations });
+  };
+
+  handleChangeRowsPerPage = event => {
+    const pageInformations = { ...this.state.pageInformations };
+    pageInformations.page = 0;
+    pageInformations.pageSize = event.target.value;
+    this.setState({ pageInformations });
+  };
+
   // Render
   render() {
     return (
       <div className='container'>
-        <h2>Container List</h2>
-        <EmployeeTable
-          employees={this.state.employees}
-          pageInformations={this.state.pageInformations}
-          convertToLocaleDate={this.convertToLocaleDate}
-        />
+        <Table className='w-100'>
+          <EmployeeTable
+            employees={this.state.employees}
+            pageInformations={this.state.pageInformations}
+            convertToLocaleDate={this.convertToLocaleDate}
+            handleChangePage={this.handleChangePage}
+            handleChangeRowsPerPage={this.handleChangeRowsPerPage}
+          />
+        </Table>
       </div>
     );
   }

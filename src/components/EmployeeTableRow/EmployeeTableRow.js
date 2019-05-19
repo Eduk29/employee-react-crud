@@ -15,7 +15,7 @@ const EmployeeTableRow = props => {
     <TableBody>
       {props.employees
         .slice(
-          props.pageInformations.pageIndes * props.pageInformations.pageSize,
+          props.pageInformations.pageIndex * props.pageInformations.pageSize,
           props.pageInformations.pageIndex * props.pageInformations.pageSize +
             props.pageInformations.pageSize
         )
@@ -59,7 +59,7 @@ const EmployeeTableRow = props => {
               {employee.phone}
             </TableCell>
             <TableCell>
-              <EmployeeTableActionsMenu />
+              <EmployeeTableActionsMenu id={employee.id} />
             </TableCell>
           </TableRow>
         ))}
