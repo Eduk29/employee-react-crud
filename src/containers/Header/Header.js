@@ -3,7 +3,6 @@ import Masthead from "../../components/Masthead";
 import TopMenu from "../../components/TopMenu";
 
 const Header = (props) => {
-  console.log('Props: ', props);
   return (
     <div>
       <TopMenu title={ props.topMenuTitle } />
