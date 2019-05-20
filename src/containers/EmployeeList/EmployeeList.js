@@ -20,7 +20,7 @@ const initialState = {
   }
 };
 
-export class List extends Component {
+export class EmployeeList extends Component {
   // Constructor
   constructor(props) {
     super(props);
@@ -62,7 +62,7 @@ export class List extends Component {
   // Render
   render() {
     return (
-      <div className='container'>
+      <div className='container my-5'>
         <Table className='w-100'>
           <EmployeeTable
             employees={this.state.employees}
@@ -76,4 +76,4 @@ export class List extends Component {
     );
   }
 }
-export default List;
+export default EmployeeList;
