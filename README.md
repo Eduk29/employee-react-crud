@@ -9,12 +9,13 @@ This application is a preliminary study using [React](https://reactjs.org/), so 
 - Remove an employee.
 
 ## Dependencies
-- [JSON Server](https://github.com/typicode/json-server)
-- [React-Router-Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
 - [Bootstrap](https://getbootstrap.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [JSON Server](https://github.com/typicode/json-server)
 - [Material-UI](https://material-ui.com/)
-- [React-Bootstrap](https://react-bootstrap.github.io/)
 - [Node-Sass](https://github.com/sass/node-sass)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [React-Router-Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
 
 ## Installation
 This project was bootstrapped with [React Create App](https://github.com/facebook/create-react-app). So open the command terminal in a directory of your choice and run the following instructions: 
