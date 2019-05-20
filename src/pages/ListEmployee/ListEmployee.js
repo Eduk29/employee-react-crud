@@ -8,7 +8,7 @@ import List from './../../containers/List/index';
 const ListEmployee = () => {
   return (
     <div>
-      <Header />
+      <Header topMenuTitle="React CRUD Example APP" mastheadTitle="Employee List"/>
       <List />
     </div>
   );

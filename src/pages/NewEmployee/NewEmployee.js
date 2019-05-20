@@ -1,9 +1,13 @@
+// React
 import React from 'react';
+
+// Containers
+import Header from './../../containers/Header/index';
 
 const NewEmployee = () => {
   return (
     <div>
-      <h1>Page NewEmployee</h1>
+      <Header topMenuTitle="React CRUD Example APP" mastheadTitle="Create a new employee"/>
     </div>
   )
 }
