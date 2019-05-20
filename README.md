@@ -51,9 +51,13 @@ You will also see any lint errors in the console.
     |   |   └── images/
     |   |   └── icons/
     |   ├── components/
+    |   |   └── EmployeeTable/
+    |   |   └── EmployeeTableActionsMenu/
+    |   |   └── EmployeeTableHeader/
+    |   |   └── EmployeeTablePaginationActions/
+    |   |   └── EmployeeTableRow/
     |   |   └── Masthead/
     |   |   └── TopMenu/
-    |   |   └── EmployeeTable/
     |   ├── containers/
     |   |   └── Header/
     |   |   └── List/
@@ -64,6 +68,7 @@ You will also see any lint errors in the console.
     |   |   └── NewEmployee/
     |   |   └── RemoveEmployee/
     |   |   └── UpdateEmployee/
+    |   ├── services/
     |   ├── theme/
     |   ├── index.css
     |   ├── index.js
