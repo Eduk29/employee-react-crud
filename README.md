@@ -13,9 +13,11 @@ This application is a preliminary study using [React](https://reactjs.org/), so 
 - [Font Awesome](https://fontawesome.com/)
 - [JSON Server](https://github.com/typicode/json-server)
 - [Material-UI](https://material-ui.com/)
+- [Material-UI Pickers](https://material-ui-pickers.dev/)
 - [Node-Sass](https://github.com/sass/node-sass)
 - [React-Bootstrap](https://react-bootstrap.github.io/)
 - [React-Router-Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+- [Text Mask](https://github.com/text-mask/text-mask)
 
 ## Installation
 This project was bootstrapped with [React Create App](https://github.com/facebook/create-react-app). So open the command terminal in a directory of your choice and run the following instructions: 
@@ -57,9 +59,14 @@ You will also see any lint errors in the console.
     |   |   └── EmployeeTableHeader/
     |   |   └── EmployeeTablePaginationActions/
     |   |   └── EmployeeTableRow/
+    |   |   └── Form/
+    |   |   └── Mask/
     |   |   └── Masthead/
+    |   |   └── Photobox/
+    |   |   └── Regex/
     |   |   └── TopMenu/
     |   ├── containers/
+    |   |   └── EmployeeForm/
     |   |   └── Header/
     |   |   └── List/
     |   ├── pages/
