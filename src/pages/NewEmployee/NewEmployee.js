@@ -3,13 +3,13 @@ import React from 'react';
 
 // Containers
 import Header from './../../containers/Header/index';
-import Form from './../../containers/Form/index';
+import EmployeeForm from './../../containers/EmployeeForm';
 
 const NewEmployee = () => {
   return (
     <div>
       <Header topMenuTitle="React CRUD Example APP" mastheadTitle="Create a new employee"/>
-      <Form />
+      <EmployeeForm formMode='create' />
     </div>
   )
 }
