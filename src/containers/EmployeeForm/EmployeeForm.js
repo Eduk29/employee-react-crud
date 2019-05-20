@@ -1,9 +1,13 @@
 // React
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 // Components
 import Photobox from "../../components/Photobox/Photobox";
 import Form from "./../../components/Form";
+
+// Services
+import * as EmployeeService from "../../services/EmployeeService";
 
 // Moments Lib
 import moment from "moment";
@@ -50,12 +54,31 @@ export class EmployeeForm extends Component {
     this.setState({ employee });
   };
 
-  displayDateDatepicker() {
+  displayDateDatepicker = () => {
     if (!!this.state && this.state.employee.birthday === "") {
       return null;
     }
     return moment(this.state.employee.birthday, "DD-MM-YYYY");
-  }
+  };
+
+  handleSubmit = async event => {
+    event.preventDefault();
+    await this.convertMomentToString();
+    EmployeeService.postEmployee(this.state.employee).then(data => {
+      console.log('Success Registration: ', data);
+      this.props.history.push("/");
+    });
+  };
+
+  handleBackOrCancel = event => {
+    this.props.history.push("/");
+  };
+
+  convertMomentToString = async () => {
+    const dateInDateFormat = this.state.employee.birthday.toDate();
+    const dateInStringFormat = dateInDateFormat.toLocaleDateString("pt-BR");
+    await this.handleDateChange(dateInStringFormat);
+  };
 
   // Render
   render() {
@@ -66,12 +89,14 @@ export class EmployeeForm extends Component {
             <div className="col-2">
               <Photobox />
             </div>
-            <form className="col-10">
+            <form onSubmit={this.handleSubmit} className="col-10">
               <Form
+                formMode={this.state.formMode}
                 employee={this.state.employee}
                 handleDateChange={this.handleDateChange}
                 handleChange={this.handleChange}
                 displayDateDatepicker={this.displayDateDatepicker()}
+                handleBackOrCancel={this.handleBackOrCancel}
               />
             </form>
           </div>
@@ -81,4 +106,4 @@ export class EmployeeForm extends Component {
   }
 }
 
-export default EmployeeForm;
+export default withRouter(EmployeeForm);
