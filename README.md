@@ -26,13 +26,13 @@ npm install
 
 ## Start Application
 
-1 - You need to start the JSON server to get access to a fake API. So open a terminal in your project root directory and run the following instruction:
+1 - Start the JSON server to get access to a fake API. So open a terminal in your project root directory and run the following instruction:
 ```bash 
 json-server --watch db.json
 ```
-**This command terminal must be open during all application execution.**
+**This command terminal must be open during all application execution. It will perform a backend simulation**
 
-2 - After the start of JSON server, you need to start the application. So open another command terminal in your project root directory and run the following instruction:
+2 - Start of JSON server, you need to start the application. So open another command terminal in your project root directory and run the following instruction:
 ```bash
 npm start
 ```
