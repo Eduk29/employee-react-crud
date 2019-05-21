@@ -93,27 +93,47 @@ const Form = props => {
       </div>
 
       <div className="row d-flex flex-row justify-content-end mt-5">
-        {
-          (props.formMode === 'create') ? (
-            <div>
-              <Button type="submit" variant="contained" className="mr-2"> Create </Button>
-              <Button type="button" variant="contained" onClick={props.handleBackOrCancel}> Back to List </Button>
-            </div>
-          ) : null
-        }
-        {
-          (props.formMode === 'update') ? (
-            <div>
-              <Button type="submit" variant="contained" className="mr-2"> Update </Button>
-              <Button type="button" variant="contained" onClick={props.handleBackOrCancel}> Cancel </Button>
-            </div>
-          ) : null
-        }
-        {
-          (props.formMode === 'details') ? (
-            <Button type="button" variant="contained" onClick={props.handleBackOrCancel}> Back to List </Button>            
-          ) : null
-        }
+        {props.formMode === "create" ? (
+          <div>
+            <Button
+              type="submit"
+              variant="contained"
+              className="accent-btn mr-2"
+            >
+              Create
+            </Button>
+            <Button
+              type="button"
+              variant="text"
+              onClick={props.handleBackOrCancel}
+            >
+              Back to List
+            </Button>
+          </div>
+        ) : null}
+        {props.formMode === "update" ? (
+          <div>
+            <Button type="submit" variant="contained" className="mr-2">
+              Update
+            </Button>
+            <Button
+              type="button"
+              variant="contained"
+              onClick={props.handleBackOrCancel}
+            >
+              Cancel
+            </Button>
+          </div>
+        ) : null}
+        {props.formMode === "details" ? (
+          <Button
+            type="button"
+            variant="contained"
+            onClick={props.handleBackOrCancel}
+          >
+            Back to List
+          </Button>
+        ) : null}
       </div>
     </div>
   );
