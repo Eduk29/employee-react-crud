@@ -1,11 +1,17 @@
-import React from 'react';
+// React
+import React from "react";
+
+// Components
+import Header from './../../containers/Header';
+import EmployeeForm from './../../containers/EmployeeForm';
 
 const DetailsEmployee = () => {
   return (
     <div>
-      <h1>Page Details Employee</h1>
+      <Header topMenuTitle="React CRUD Example APP" mastheadTitle="Employee Details"/>
+      <EmployeeForm formMode='details' />
     </div>
-  )
-}
+  );
+};
 
 export default DetailsEmployee;
