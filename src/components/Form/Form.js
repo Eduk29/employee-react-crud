@@ -34,6 +34,7 @@ const Form = props => {
             value={props.employee.name}
             onChange={props.handleChange}
             margin="normal"
+            InputProps={{ readOnly: !props.isEditMode() }}
           />
         </FormControl>
 
@@ -48,6 +49,8 @@ const Form = props => {
               format="DD/MM/YYYY"
               margin="normal"
               views={["year", "month", "day"]}
+              inputProps={{ readOnly: !props.isEditMode() }}
+              KeyboardButtonProps={{ disabled: !props.isEditMode() }}
             />
           </MuiPickersUtilsProvider>
         </FormControl>
@@ -63,7 +66,7 @@ const Form = props => {
             onChange={props.handleChange}
             id="cpf"
             inputComponent={Mask}
-            inputProps={{ mask: CPF_MASK }}
+            inputProps={{ mask: CPF_MASK, readOnly: !props.isEditMode()  }}
           />
         </FormControl>
 
@@ -76,7 +79,7 @@ const Form = props => {
             onChange={props.handleChange}
             id="rg"
             inputComponent={Mask}
-            inputProps={{ mask: RG_MASK }}
+            inputProps={{ mask: RG_MASK, readOnly: !props.isEditMode()  }}
           />
         </FormControl>
 
@@ -87,7 +90,7 @@ const Form = props => {
             onChange={props.handleChange}
             id="phone"
             inputComponent={Mask}
-            inputProps={{ mask: TEL_MASK }}
+            inputProps={{ mask: TEL_MASK, readOnly: !props.isEditMode()  }}
           />
         </FormControl>
       </div>
