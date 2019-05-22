@@ -1,9 +1,15 @@
+// React
 import React from 'react';
+
+// Container
+import Header from './../../containers/Header';
+import EmployeeForm from './../../containers/EmployeeForm';
 
 const UpdateEmployee = () => {
   return (
     <div>
-      <h1>Page UpdateEmployee</h1>
+      <Header topMenuTitle="React CRUD Example APP" mastheadTitle="Update Employee"/>
+      <EmployeeForm formMode='update' />
     </div>
   )
 }
