@@ -12,40 +12,40 @@ const EmployeeTableHeader = () => {
     <TableHead>
       <TableRow>
         <TableCell
-          className={'p-0 idColumn header-cell-text-size'}
+          className={'p-0 header-cell-text-size'}
           colSpan='4'
           align='center'>
           Id
         </TableCell>
         <TableCell
-          className={'p-0 nomeColumn header-cell-text-size'}
+          className={'p-0 header-cell-text-size'}
           colSpan='6'
           align='left'>
-          Nome
+          Name
         </TableCell>
         <TableCell
-          className={'p-0 dataColumn header-cell-text-size'}
+          className={'p-0 header-cell-text-size'}
           colSpan='2'
           align='left'>
-          Data de Nascimento
+          Birthday
         </TableCell>
         <TableCell
-          className={'p-0 cpfColumn header-cell-text-size'}
+          className={'p-0 header-cell-text-size'}
           colSpan='2'
           align='left'>
           CPF
         </TableCell>
         <TableCell
-          className={'p-0 rgColumn header-cell-text-size'}
+          className={'p-0 header-cell-text-size'}
           colSpan='2'
           align='left'>
           RG
         </TableCell>
         <TableCell
-          className={'p-0 telefoneColumn header-cell-text-size'}
+          className={'p-0 header-cell-text-size'}
           colSpan='1'
           align='left'>
-          Telefone
+          Phone
         </TableCell>
         <TableCell />
       </TableRow>
