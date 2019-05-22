@@ -18,19 +18,19 @@ const EmployeeTableActionsMenu = props => {
     <div>
       <Link to={`${props.id}/update`}>
         <FontAwesomeIcon
-          className={'mx-2 icon-size icon-color'}
+          className={'mx-2 pointer icon-size icon-color'}
           icon={faPencilAlt}
         />
       </Link>
       <Link to={`${props.id}/details`}>
         <FontAwesomeIcon
-          className={'mx-2 icon-size icon-color'}
+          className={'mx-2 pointer icon-size icon-color'}
           icon={faSearch}
         />
       </Link>
       <Link to={`${props.id}/remove`}>
         <FontAwesomeIcon
-          className={'mx-2 icon-size icon-color'}
+          className={'mx-2 pointer icon-size icon-color'}
           icon={faTrashAlt}
         />
       </Link>
