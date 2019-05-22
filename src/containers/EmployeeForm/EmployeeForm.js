@@ -39,7 +39,38 @@ export class EmployeeForm extends Component {
     this.state = initialState;
   }
 
+  // Lifecycle Hooks
+  componentDidMount() {
+    if (!!this.getUserIdFromParams()){
+      EmployeeService.getEmployee(this.getUserIdFromParams()).then(data => {
+        let employee = { ...this.state.employee };
+        employee = data;
+        this.setState({ employee });
+      })
+    }
+  }
+
   // Methods
+  displayDateDatepicker = () => {
+    if (!!this.state && this.state.employee.birthday === "") {
+      return null;
+    }
+    return moment(this.state.employee.birthday, "DD-MM-YYYY");
+  };
+
+  convertMomentToString = async () => {
+    const dateInISOFormat = this.state.employee.birthday.toISOString();
+    await this.handleDateChange(dateInISOFormat);
+  };
+
+  getUserIdFromParams = () => {
+    return this.props.match.params.id;
+  }
+
+  isEditMode = () => {
+    return ((this.state.formMode === 'create') || (this.state.formMode === 'update'))
+  }
+
   handleChange = event => {
     const key = event.currentTarget.id;
     const value = event.currentTarget.value;
@@ -54,30 +85,26 @@ export class EmployeeForm extends Component {
     this.setState({ employee });
   };
 
-  displayDateDatepicker = () => {
-    if (!!this.state && this.state.employee.birthday === "") {
-      return null;
-    }
-    return moment(this.state.employee.birthday, "DD-MM-YYYY");
-  };
-
   handleSubmit = async event => {
     event.preventDefault();
     await this.convertMomentToString();
-    EmployeeService.postEmployee(this.state.employee).then(data => {
-      console.log('Success Registration: ', data);
-      this.props.history.push("/");
-    });
+    
+    if (this.state.formMode === 'create') {
+      EmployeeService.postEmployee(this.state.employee).then(data => {
+        this.props.history.push("/");
+      });
+    } 
+
+    if (this.state.formMode === 'update') {
+      EmployeeService.updateEmployee(this.state.employee).then(data => {
+        this.props.history.push("/");
+      });
+    }
+    
   };
 
   handleBackOrCancel = event => {
     this.props.history.push("/");
-  };
-
-  convertMomentToString = async () => {
-    const dateInDateFormat = this.state.employee.birthday.toDate();
-    const dateInStringFormat = dateInDateFormat.toLocaleDateString("pt-BR");
-    await this.handleDateChange(dateInStringFormat);
   };
 
   // Render
@@ -87,7 +114,7 @@ export class EmployeeForm extends Component {
         <div className="container my-5">
           <div className="row">
             <div className="col-2">
-              <Photobox />
+              <Photobox label={this.state.employee.id} />
             </div>
             <form onSubmit={this.handleSubmit} className="col-10">
               <Form
@@ -97,6 +124,7 @@ export class EmployeeForm extends Component {
                 handleChange={this.handleChange}
                 displayDateDatepicker={this.displayDateDatepicker()}
                 handleBackOrCancel={this.handleBackOrCancel}
+                isEditMode={this.isEditMode}
               />
             </form>
           </div>
