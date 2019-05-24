@@ -66,7 +66,7 @@ const Form = props => {
             onChange={props.handleChange}
             id="cpf"
             inputComponent={Mask}
-            inputProps={{ mask: CPF_MASK, readOnly: !props.isEditMode()  }}
+            inputProps={{ mask: CPF_MASK, readOnly: !props.isEditMode() }}
           />
         </FormControl>
 
@@ -79,7 +79,7 @@ const Form = props => {
             onChange={props.handleChange}
             id="rg"
             inputComponent={Mask}
-            inputProps={{ mask: RG_MASK, readOnly: !props.isEditMode()  }}
+            inputProps={{ mask: RG_MASK, readOnly: !props.isEditMode() }}
           />
         </FormControl>
 
@@ -90,7 +90,7 @@ const Form = props => {
             onChange={props.handleChange}
             id="phone"
             inputComponent={Mask}
-            inputProps={{ mask: TEL_MASK, readOnly: !props.isEditMode()  }}
+            inputProps={{ mask: TEL_MASK, readOnly: !props.isEditMode() }}
           />
         </FormControl>
       </div>
@@ -116,7 +116,11 @@ const Form = props => {
         ) : null}
         {props.formMode === "update" ? (
           <div>
-            <Button type="submit" variant="contained" className="mr-2">
+            <Button
+              type="submit"
+              variant="contained"
+              className="mr-2 accent-btn"
+            >
               Update
             </Button>
             <Button
