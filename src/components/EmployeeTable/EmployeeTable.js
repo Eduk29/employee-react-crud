@@ -10,6 +10,7 @@ import EmployeeTablePaginationActions from '../EmployeeTablePaginationActions/Em
 import { TableFooter, TableRow, TablePagination } from '@material-ui/core';
 
 const EmployeeTable = props => {
+  
   return (
     <Fragment>
       <EmployeeTableHeader />
@@ -17,6 +18,11 @@ const EmployeeTable = props => {
         employees={props.employees}
         pageInformations={props.pageInformations}
         convertToLocaleDate={props.convertToLocaleDate}
+        getModalStyle={props.getModalStyle}
+        useStyles={props.useStyles}
+        openModal={props.openModal}
+        handleOpenModal={props.handleOpenModal}
+        handleCloseModal={props.handleCloseModal}
       />
       <TableFooter>
         <TableRow>

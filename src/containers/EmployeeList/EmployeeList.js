@@ -9,18 +9,21 @@ import * as EmployeeService from '../../services/EmployeeService';
 
 // Material
 import { Table } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 
-
+// Initial State
 const initialState = {
   employees: [],
   pageInformations: {
     pageIndex: 0,
     pageSize: 10,
     pageSizeOptions: [5, 10, 50, 100]
-  }
+  }, 
+  openModal: false
 };
 
 export class EmployeeList extends Component {
+  
   // Constructor
   constructor(props) {
     super(props);
@@ -46,6 +49,27 @@ export class EmployeeList extends Component {
     return newDate.toLocaleDateString('pt-BR');
   }
 
+  getModalStyle = () => {
+    const top = 50;
+    const left = 50;
+  
+    return {
+      top: `${top}%`,
+      left: `${left}%`,
+      transform: `translate(-${top}%, -${left}%)`
+    };
+  };
+
+  useStyles = makeStyles(theme => ({
+    paper: {
+      position: "absolute",
+      width: 400,
+      backgroundColor: "white",
+      padding: 25,
+      outline: "none"
+    }
+  }));
+  
   handleChangePage = (event, page) => {
     const pageInformations = { ...this.state.pageInformations };
     pageInformations.pageIndex = page;
@@ -59,6 +83,14 @@ export class EmployeeList extends Component {
     this.setState({ pageInformations });
   };
 
+  handleOpenModal = () => {
+    this.setState({openModal: true});
+  };
+
+  handleCloseModal = () => {
+    this.setState({openModal: false});
+  };
+
   // Render
   render() {
     return (
@@ -70,6 +102,11 @@ export class EmployeeList extends Component {
             convertToLocaleDate={this.convertToLocaleDate}
             handleChangePage={this.handleChangePage}
             handleChangeRowsPerPage={this.handleChangeRowsPerPage}
+            handleOpenModal={this.handleOpenModal}
+            handleCloseModal={this.handleCloseModal}
+            getModalStyle={this.getModalStyle}
+            useStyles={this.useStyles}
+            openModal={this.state.openModal}
           />
         </Table>
       </div>
