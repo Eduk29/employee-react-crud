@@ -55,10 +55,10 @@ export class EmployeeForm extends Component {
     if (!!this.state && this.state.employee.birthday === "") {
       return null;
     }
-    return moment(this.state.employee.birthday, "DD-MM-YYYY");
+    return this.state.employee.birthday;
   };
 
-  convertMomentToString = async () => {
+  convertMomentToISO = async () => {
     const dateInISOFormat = this.state.employee.birthday.toISOString();
     await this.handleDateChange(dateInISOFormat);
   };
@@ -71,6 +71,7 @@ export class EmployeeForm extends Component {
     return ((this.state.formMode === 'create') || (this.state.formMode === 'update'))
   }
 
+  // Handle Methods
   handleChange = event => {
     const key = event.currentTarget.id;
     const value = event.currentTarget.value;
@@ -87,7 +88,7 @@ export class EmployeeForm extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-    await this.convertMomentToString();
+    await this.convertMomentToISO();
     
     if (this.state.formMode === 'create') {
       EmployeeService.postEmployee(this.state.employee).then(data => {
