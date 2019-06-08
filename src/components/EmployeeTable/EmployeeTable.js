@@ -8,6 +8,28 @@ import EmployeeTablePaginationActions from '../EmployeeTablePaginationActions/Em
 
 // Material
 import { TableFooter, TableRow, TablePagination } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
+
+const getModalStyle = () => {
+  const top = 50;
+  const left = 50;
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`
+  };
+}
+
+const useStyles = makeStyles(theme => ({
+  paper: {
+    position: 'absolute',
+    width: 400,
+    backgroundColor: 'white',
+    padding: 25,
+    outline: 'none'
+  }
+}));
 
 const EmployeeTable = props => {
   
@@ -18,8 +40,8 @@ const EmployeeTable = props => {
         employees={props.employees}
         pageInformations={props.pageInformations}
         convertToLocaleDate={props.convertToLocaleDate}
-        getModalStyle={props.getModalStyle}
-        useStyles={props.useStyles}
+        getModalStyle={getModalStyle}
+        useStyles={useStyles}
         openModal={props.openModal}
         handleOpenModal={props.handleOpenModal}
         handleCloseModal={props.handleCloseModal}
