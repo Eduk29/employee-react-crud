@@ -10,6 +10,8 @@ import { TableRow, TableCell, TableBody } from "@material-ui/core";
 // Styles
 import "./EmployeeTableRow.scss";
 
+
+
 const EmployeeTableRow = props => {
 
   return (
@@ -68,11 +70,8 @@ const EmployeeTableRow = props => {
             <TableCell>
               <EmployeeTableActionsMenu
                 id={employee.id}
-                openModal={props.openModal}
-                getModalStyle={props.getModalStyle}
+                modalStyle={props.modalStyle}
                 useStyles={props.useStyles}
-                handleOpenModal={props.handleOpenModal}
-                handleCloseModal={props.handleCloseModal}
               />
             </TableCell>
           </TableRow>

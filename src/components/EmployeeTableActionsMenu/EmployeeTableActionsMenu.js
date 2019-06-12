@@ -1,5 +1,5 @@
 // React
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 // FontAwesome
@@ -16,6 +16,17 @@ import "./EmployeeTableActionsMenu.scss";
 import RemoveModal from "../RemoveModal/RemoveModal";
 
 const EmployeeTableActionsMenu = props => {
+  
+  const [open, setOpen] = React.useState(false);
+  
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div>
       <Link to={`${props.id}/update`}>
@@ -30,16 +41,18 @@ const EmployeeTableActionsMenu = props => {
           icon={faSearch}
         />
       </Link>
-      <IconButton aria-label="Delete" onClick={props.handleOpenModal}>
+      <IconButton aria-label="Delete" onClick={handleOpen}>
         <DeleteIcon fontSize="small" className={"icon-color"} />
       </IconButton>
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
-        open={props.openModal}
-        onClose={props.handleClose}
+        open={open}
+        onClose={handleClose}
       >
-        <RemoveModal />
+        <Fragment>
+          <RemoveModal modalStyle={props.modalStyle} useStyles={props.useStyles} />
+        </Fragment>
       </Modal>
     </div>
   );

@@ -7,9 +7,32 @@ import EmployeeTableRow from '../EmployeeTableRow';
 import EmployeeTablePaginationActions from '../EmployeeTablePaginationActions/EmployeeTablePaginationActions';
 
 // Material
-import { TableFooter, TableRow, TablePagination } from '@material-ui/core';
+import { TableFooter, TableRow, TablePagination, makeStyles } from '@material-ui/core';
+
+function getModalStyle() {
+  const top = 50;
+  const left = 50;
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
+
+const useStyles = makeStyles(theme => ({
+  paper: {
+    position: 'absolute',
+    width: 400,
+    backgroundColor: 'white',
+    padding: '150px',
+    outline: 'none',
+  },
+}));
 
 const EmployeeTable = props => {
+
+  const [modalStyle] = React.useState(getModalStyle);
   
   return (
     <Fragment>
@@ -18,11 +41,8 @@ const EmployeeTable = props => {
         employees={props.employees}
         pageInformations={props.pageInformations}
         convertToLocaleDate={props.convertToLocaleDate}
-        getModalStyle={props.getModalStyle}
-        useStyles={props.useStyles}
-        openModal={props.openModal}
-        handleOpenModal={props.handleOpenModal}
-        handleCloseModal={props.handleCloseModal}
+        modalStyle={modalStyle}
+        useStyles={useStyles}
       />
       <TableFooter>
         <TableRow>
