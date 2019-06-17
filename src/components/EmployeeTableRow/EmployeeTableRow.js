@@ -7,6 +7,7 @@ import EmployeeTableActionsMenu from "../EmployeeTableActionsMenu/EmployeeTableA
 // Material
 import { TableRow, TableCell, TableBody } from "@material-ui/core";
 
+
 // Styles
 import "./EmployeeTableRow.scss";
 
